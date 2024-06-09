@@ -14,8 +14,15 @@ function getComputerChoice() {
   // console.log(decision);
 }
 
-getComputerChoice();
+// getComputerChoice();
 
 // LOGIC FOR HUMAN CHOICE
 
-function getHumanChoice() {}
+function getHumanChoice() {
+  let humanDecision = prompt("What are you playing as?").toLowerCase();
+  console.log(humanDecision);
+}
+// getHumanChoice();
+
+let humanScore = 0;
+let computerScore = 0;
