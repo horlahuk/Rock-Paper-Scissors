@@ -54,7 +54,19 @@ function playRound(humanChoice, computerChoice) {
 }
 
 // Main Game Logic
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+for (let i = 0; i < 5; i++) {
+  const humanSelection = getHumanChoice();
+  const computerSelection = getComputerChoice();
+  playRound(humanSelection, computerSelection);
+}
 
-playRound(humanSelection, computerSelection);
+// Log final scores and game result
+console.log("Final Human Score: " + humanScore);
+console.log("Final Computer Score: " + computerScore);
+if (humanScore > computerScore) {
+  console.log("You won the game!");
+} else if (computerScore > humanScore) {
+  console.log("Computer won the game!");
+} else {
+  console.log("It's a tie!");
+}
